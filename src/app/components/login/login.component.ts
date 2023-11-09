@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { AuthService } from "../auth.service";
+import { AuthService } from "../../auth.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {
     this.loginForm = this.formBuilder.group({
       username: ["", [Validators.required]],
@@ -61,7 +62,7 @@ export class LoginComponent implements OnInit {
 
       if (!this.usernameError && !this.passwordError) {
         if (this.authService.login(username, password)) {
-          console.log("WELCOME!");
+          this.router.navigate(["/home"]);
         } else {
           // If the username and password inserted don't match with our account credentials,
           // this message will be rendered.
