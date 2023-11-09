@@ -1,27 +1,72 @@
-# MotorolaCodingChallenge
+# Motorola Solutions - Coding Challenge by Andrea Piano
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+## Project Overview
 
-## Development server
+Hi, fellow developers! I'm Andrea Piano, and that was my coding challenge that I developed for Motorola Solutions. In this coding challenge, my goal was to build a basic Angular 15 login page. It took me almost 3 hours. The login page includes essential functionalities such as user authentication, form validation, and navigation to a home upon successful login. The code submitted adheres to best practices, ensures a smooth user experience, and provides a solid foundation for future development. It’s important to note that this challenge is specifically focused on Front-end Developement, and there was no requirement to develop or submit any backend code.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Notes & Considerations
 
-## Code scaffolding
+- This was my first project developed using Angular 15, which I didn't find too difficult to develop, coming from solid fundamentals using React.js and simply having experience in Front-end Engineering. Also, the complexity of the tasks was definitely entry-level, and today I can claim to be more of a mid-level developer. However, I still have a lot to learn and improve, especially when it comes to Angular. Any feedback is welcome!
+  (I helped myself by reading the official Angular 15 documentation, using Stack Overflow, Google, and watching YouTube tutorials.)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- I added some comments to my code where I felt it was necessary, so that other developers can never get lost in the code.
+
+- Please read the entire README before running the application.
+
+## Setup
+
+Please begin by downloading this repo, or clone it by running the following command in the terminal:
+
+```
+git clone https://github.com/ateyapayo/motorola-assessment.git
+```
+
+### Installation
+
+You will require NPM to run this project. Please install this before continuing.
+You can find these here: https://nodejs.org/en/ .
+
+Once you have NPM installed, please run the following command:
+
+#### Client Setup
+
+```
+npm install
+```
+
+## Running the project
+
+To run the project, you will need to simply run the client:
+
+```
+ng serve
+```
+
+This will start the Angular client application on port 4200.
+
+## How to Sign In
+
+To sign in to the form, simply enter the following credentials:
+
+```
+USERNAME: admin
+PASSWORD: 2023_Motorola
+```
+
+If the Sign In is successful, then you will be redirected to the home. This final destination, according to the assignment text, didn't need to show any content. Therefore I simply decorated the Angular Component initail message and left that as successful message.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Code scaffolding
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In case you had to continue my work, run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Running end-to-end tests
+## Resources
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- I downloaded the Motorola Solutions logo from the following link: https://commons.wikimedia.org/wiki/File:Motorola_M_symbol_black.svg .
 
-## Further help
+- I developed the UI by getting inspired from the SIGN IN modal on the Motorola Solutions official website.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Enjoy!
