@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Hi, fellow developers! I'm Andrea Piano, and that was my coding challenge that I developed for Motorola Solutions. In this coding challenge, my goal was to build a basic Angular 15 login page. It took me almost 3 hours. The login page includes essential functionalities such as user authentication, form validation, and navigation to a home upon successful login. The code submitted adheres to best practices, ensures a smooth user experience, and provides a solid foundation for future development. It’s important to note that this challenge is specifically focused on Front-end Developement, and there was no requirement to develop or submit any backend code.
+Hi, fellow developers! I'm Andrea Piano, and this is my coding challenge that I developed for Motorola Solutions. In this coding challenge, my goal was to build a basic Angular 15 login page. It took me almost 3 hours. The login page includes essential functionalities such as user authentication, form validation, and navigation to a home upon successful login. The code submitted adheres to best practices, ensures a smooth user experience, and provides a solid foundation for future development. It’s important to note that this challenge is specifically focused on Front-end Developement, and there was no requirement to develop or submit any backend code.
 
 ## Notes & Considerations
 
@@ -58,6 +58,10 @@ If the Sign In is successful, then you will be redirected to the home. This fina
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Test
+
+Run `ng test` to test the project with Karma, to ensure that all functionalities work properly.
 
 ## Code scaffolding
 
