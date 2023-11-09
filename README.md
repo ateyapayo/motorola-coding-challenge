@@ -53,7 +53,8 @@ USERNAME: admin
 PASSWORD: 2023_Motorola
 ```
 
-If the Sign In is successful, then you will be redirected to the home. This final destination, according to the assignment text, didn't need to show any content. Therefore I simply decorated the Angular Component initail message and left that as successful message.
+If the Sign In is successful, then you will be redirected to the home. This final destination, according to the assignment text, didn't need to show any content. Therefore I simply decorated the Angular Component initail message and left that as successful message. 
+You can also ensure that the validation is effective by inserting some incorrect username and/or password or leaving the form blank. Try to sign in and see what happens.
 
 ## Build
 
