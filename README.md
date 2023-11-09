@@ -18,7 +18,7 @@ Hi, fellow developers! I'm Andrea Piano, and that was my coding challenge that I
 Please begin by downloading this repo, or clone it by running the following command in the terminal:
 
 ```
-git clone https://github.com/ateyapayo/motorola-assessment.git
+git clone https://github.com/ateyapayo/motorola-coding-challenge.git
 ```
 
 ### Installation
