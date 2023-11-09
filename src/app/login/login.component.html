@@ -8,6 +8,13 @@
       placeholder="Enter your username"
       aria-label="Username"
     />
+    <!-- If the username is not in line with common usernames online, this message will be rendered.
+      For example: it should have at least 3 characters and it can't be an email address. -->
+    <div class="error-message">
+      <span *ngIf="usernameError" class="error-text" role="alert"
+        >{{ usernameError }}</span
+      >
+    </div>
   </div>
 
   <div class="mb-3">
@@ -15,15 +22,80 @@
       <label for="password">Password</label>
       <div class="input-pw-container">
         <input
-          type="password"
+          type="{{ type }}"
           id="password"
           formControlName="password"
           placeholder="Enter your password"
           aria-label="Password"
+          autocomplete="off"
         />
+
+        <!-- Show password icon -->
+        <svg
+          alt="Show password"
+          title="Show password"
+          *ngIf="type === 'password'"
+          class="show-icon"
+          (click)="togglePasswordVisibility()"
+          class="header-login-icon header-login-icon-disable"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="display: inline;"
+          aria-label="Show Password"
+        >
+          <g
+            transform="translate(1.5 3.5)"
+            fill="none"
+            fill-rule="evenodd"
+            stroke="#000"
+          >
+            <path
+              d="M4.208 12.58C1.403 10.806 0 8 0 8s3-6 9-6c1.77 0 3.279.522 4.526 1.259M15.75 5C17.25 6.5 18 8 18 8s-3 6-9 6c-.732 0-1.42-.089-2.063-.247M1 16L17 0"
+            ></path>
+          </g>
+        </svg>
+
+        <!-- Hide password icon -->
+        <svg
+          alt="Hide password"
+          title="Hide password"
+          *ngIf="type === 'text'"
+          class="show-icon"
+          (click)="togglePasswordVisibility()"
+          class="header-login-icon header-login-icon-enable"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          style="display: inline;"
+          aria-label="Hide Password"
+        >
+          <g fill="none" stroke="#000" fill-rule="evenodd">
+            <path
+              d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"
+            ></path>
+            <path
+              d="M21 12s-3 6.504-9 6.504S3 12 3 12s3-6.5 9-6.5 9 6.5 9 6.5z"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <!-- If the password was not inserted and we try to Sign In anyway, this message will be rendered. -->
+      <div class="error-message">
+        <span *ngIf="passwordError" class="error-text" role="alert"
+          >{{ passwordError }}</span
+        >
       </div>
     </div>
   </div>
 
   <button type="submit">Sign in</button>
+
+  <!-- If the username and password inserted don't match with our account credentials,
+        this message will be rendered. -->
+  <div class="error-message" *ngIf="credentialsError">
+    <span class="error-text" role="alert">{{ credentialsError }}</span>
+  </div>
 </form>
