@@ -4,8 +4,20 @@ form {
   align-items: center;
 }
 
+label {
+  display: flex;
+  height: 9px;
+  padding-bottom: 1em;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
 input {
   padding: 1em;
+}
+
+input::placeholder {
+  color: rgb(189, 189, 189);
 }
 
 .username-container,
@@ -14,21 +26,23 @@ input {
 }
 
 .username-container input {
+  border: 1px solid gray;
   height: 10px;
 }
 
 .input-pw-container input {
   border: none;
-  width: 200px;
+  width: 208.5px;
 }
 
 .input-pw-container {
   border: 1px solid gray;
+  height: 37px;
 }
 
 .username-container input {
   display: flex;
-  width: 230px;
+  width: 240px;
 }
 
 input:focus {
@@ -44,4 +58,29 @@ input:focus {
   align-self: center;
   padding-right: 9px;
   cursor: pointer;
+}
+
+.error-text {
+  margin-top: 4px;
+  display: flex;
+  font-weight: 600;
+  font-size: 12px;
+  color: rgb(210, 20, 20);
+}
+
+button {
+  border: none;
+  margin: 2em 0;
+  width: 90px;
+  padding: 1em;
+  text-transform: uppercase;
+  background-color: black;
+  border-radius: 3em;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.739);
+  transition: 0.15s;
 }

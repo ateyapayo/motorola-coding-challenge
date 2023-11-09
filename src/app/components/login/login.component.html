@@ -9,7 +9,7 @@
       aria-label="Username"
     />
     <!-- If the username is not in line with common usernames online, this message will be rendered.
-      For example: it should have at least 3 characters and it can't be an email address. -->
+    For example: it should have at least 3 characters and it can't be an email address. -->
     <div class="error-message">
       <span *ngIf="usernameError" class="error-text" role="alert"
         >{{ usernameError }}</span
@@ -94,7 +94,7 @@
   <button type="submit">Sign in</button>
 
   <!-- If the username and password inserted don't match with our account credentials,
-        this message will be rendered. -->
+      this message will be rendered. -->
   <div class="error-message" *ngIf="credentialsError">
     <span class="error-text" role="alert">{{ credentialsError }}</span>
   </div>
