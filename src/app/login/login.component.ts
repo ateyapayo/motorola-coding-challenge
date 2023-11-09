@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { AuthService } from "../auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -14,7 +16,10 @@ export class LoginComponent implements OnInit {
   passwordError: string = "";
   credentialsError: string = "";
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService
+  ) {
     this.loginForm = this.formBuilder.group({
       username: ["", [Validators.required]],
       password: ["", [Validators.required]],
@@ -52,8 +57,16 @@ export class LoginComponent implements OnInit {
       if (!password) {
         // If the password was not inserted and we try to Sign In anyway, this message will be rendered.
         this.passwordError = "Please enter a password.";
-      } else {
-        console.log("Login form submitted:", this.loginForm.value);
+      }
+
+      if (!this.usernameError && !this.passwordError) {
+        if (this.authService.login(username, password)) {
+          console.log("WELCOME!");
+        } else {
+          // If the username and password inserted don't match with our account credentials,
+          // this message will be rendered.
+          this.credentialsError = "Invalid username or password.";
+        }
       }
     }
   }
